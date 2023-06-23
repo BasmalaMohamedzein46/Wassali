@@ -687,6 +687,7 @@ const getAceeptedRequests = async (req, res) => {
     const traveler = await Traveler.findOne({
       userId: id,
     });
+    
     const trip = await Trip.findOne({
       Traveler: traveler._id,
     }).sort({ createdAt: -1 });
