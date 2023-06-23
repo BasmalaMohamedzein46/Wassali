@@ -680,6 +680,7 @@ const filterRequestsByCity = async (req, res) => {
 };
 
 const getAceeptedRequests = async (req, res) => {
+  
   const id = req.user._id;
   const foundedUser = await User.findById(id);
   console.log(foundedUser);
