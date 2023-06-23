@@ -666,7 +666,6 @@ const checkoutWithPrice = async (id, req, res) => {
 };
 
 const filterRequestsByCity = async (req, res) => {
-  
   const { from } = req.body;
   try {
     const requests = await Request.find({ from: { $regex: from, $options: 'i' } });
@@ -681,7 +680,6 @@ const filterRequestsByCity = async (req, res) => {
 };
 
 const getAceeptedRequests = async (req, res) => {
-
   const id = req.user._id;
   const foundedUser = await User.findById(id);
   console.log(foundedUser);
